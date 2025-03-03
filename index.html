@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reader</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+      <h1>Bienvenido a Reader</h1>
+      <!-- Navegación -->
+      <button id="menu-toggle" class="menu-toggle">☰</button>
+      <nav class="nav-bar" id="nav-bar">
+        <a href="#" category="all">Todos</a>
+        <a href="#" category="novela">Novela</a>
+        <a href="#" category="infantil">Infantil</a>
+        <a href="#" category="ficcion">Ficción</a>
+        <a href="#" category="clasico">Clásico</a>
+        <a href="#" category="fantasia">Fantasía</a>
+        <a href="#" category="aventura">Aventura</a>
+        <a href="#" category="ciencia-ficcion">Ciencia Ficción</a>
+        <a href="#" category="romance">Romance</a>
+        <a href="#" category="terror">Terror</a>
+        <a href="#" category="hechos-reales">Hechos Reales</a>
+        <a href="#" category="desarrollo-personal">Desarrollo personal</a>
+        <a href="#" category="poesia">Poesia</a>
+      </nav>
+
+  </script>
+    <!-- Barra de búsqueda alineada a la derecha -->
+    <div class="search-container">
+      <input type="text" id="search" placeholder="Buscar libros..." />
+    </div>
+  </header> 
+
+  <!-- Botón de modo oscuro -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">🌛</button>
+
+  <main class="container">
+    <!-- Video promocional -->
+    <section class="video-container">
+      <video controls>
+        <source src= "imagenes/video.mp4" type="video/mp4">
+      </video>
+    </section>
+
+ <!-- Lista de libros -->
+ <section id="book-list" class="book-grid">
+  <div class="book-card">
+    <img src="book-cover.jpg" alt="Portada del libro" class="book-image">
+    <h3 class="book-title">Título del Libro</h3>
+    <p class="book-category">Autor del Libro</p>
+    <div class="buttons">
+      <button class="btn read-btn" id="readBtn">📖 Leer</button>
+      <a href="#" class="btn buy-btn">🛒 Comprar</a>
+    </div>
+  </div>
+  <!-- Puedes agregar más tarjetas de libros aquí -->
+  </main>
+
+  <footer>
+    <p class="footer-text">Síguenos en nuestras redes sociales:</p>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/matthx_b" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="linkedin.com/in/mattius-holguin-blanco-b31487351" target="_blank" title="Linkedin"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Matt-py10" target="_blank" title="Github"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+
+  <div class="music-player" id="music-toggle" loop>
+    <i class="fas fa-music"></i>
+    <audio id="music-player" loop>
+      <source src="https://www.bensound.com/bensound-music/bensound-relaxing.mp3" type="audio/mp3">
+    </audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
