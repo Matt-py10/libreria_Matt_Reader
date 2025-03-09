@@ -136,6 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
         modal.innerHTML = `
             <div class="modal-content">
+            <button class="modal-close">&times;</button>
                 <img src="${book.image}" alt="${book.title}" class="modal-image"/>
                 <div class="modal-text">
                     <h2>${book.title}</h2>
@@ -165,15 +166,16 @@ document.addEventListener("DOMContentLoaded", () => {
             e.stopPropagation();
         });
     
-        document.addEventListener("click", () => {
+        document.querySelector(".modal-close").addEventListener("click", () => {
             modal.style.display = "none";
-        }, { once: true });
+        });
     }
-    
+
     // Cerrar modal al hacer clic fuera
     document.addEventListener("click", () => {
         modal.style.display = "none";
     });
+    
 
     // Renderizar los libros al cargar la página
     renderBooks();
@@ -241,6 +243,21 @@ document.addEventListener("DOMContentLoaded", () => {
             background: rgb(108, 3, 3);
         }
 
+        .modal-close {
+            position: absolute;
+            top: 12px;
+            right: 18px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: whiteSmoke;
+            cursor: pointer;
+            }
+
+            .modal-close:hover {
+            color: black;
+        }
+
         /* 🌑 Modo oscuro */
         .dark-mode .modal-content {
             background: linear-gradient(to left, rgb(0, 115, 169), rgba(2, 33, 63, 0.67));
@@ -272,9 +289,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 width: 100%; /* Botón ocupa todo el ancho */
                 padding: 14px;
             }
-        }
 
-        
+            .modal-close {
+            position: absolute;
+            top: 12px;
+            right: 18px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: whiteSmoke;
+            cursor: pointer;
+            }
+
+            .modal-close:hover {
+            color: black;
+            }
+        }
 
     `;
     document.head.appendChild(style);
